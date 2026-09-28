@@ -3,7 +3,7 @@ import pandas as pd
 
 tmp_dir = os.environ.get("tmp_dir", config['tmp_dir'])
 
-## Define output directory
+# Output directory
 output_dir = os.path.join(config['output_dir'], "identification")
 
 if "single_sample" in config:
@@ -38,9 +38,6 @@ include:
 include:
     '../rules/identification/viralm.smk'
 
-## Sometimes it is the case of a fasta file split into multiple sample. For this, we can consolidate at the end
-#if "consolidate" in config: ## Needs to be indicated in the config file
-#    '../rules/identification/consolidate.smk' 
 
 rule all:
      input:

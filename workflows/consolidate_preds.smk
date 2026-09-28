@@ -3,7 +3,7 @@ import pandas as pd
 
 tmp_dir = os.environ.get("tmp_dir", config['tmp_dir'])
 
-## Define output directory
+# Output directory
 output_dir = os.path.join(config['output_dir'], "consolidated_seqs")
 
 import pandas as pd
@@ -12,7 +12,7 @@ import pandas as pd
 samples = pd.read_table(config["data_table"], sep="\t", comment="#", dtype={"sample_alias": str})
 samples.set_index(["sample_alias", "assembly_type"], drop=False, inplace=True)
 
-# Define function to retrieve input files
+# Resolve input files.
 def get_input_files(sample, assembly_type):
     """Retrieve all relevant input files based on assembly type."""
 
@@ -48,7 +48,7 @@ workdir:
 include:
     '../rules/identification/consolidate_preds.smk'
 
-# Define the `all` rule
+# Workflow targets
 rule all:
     input:
         list(sample_final_outputs.values())

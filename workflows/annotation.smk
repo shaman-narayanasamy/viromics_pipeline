@@ -3,7 +3,7 @@ import pandas as pd
 
 tmp_dir = os.environ.get("tmp_dir", config['tmp_dir'])
 
-## Define output directory
+# Output directory
 output_dir = os.path.join(config['output_dir'],  "annotation")
 
 if "single_sample" in config:
