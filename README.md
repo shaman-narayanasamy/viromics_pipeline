@@ -46,8 +46,4 @@ defaults are 0.95 nucleotide identity and 0.85 aligned fraction/query coverage.
 The alternative retains the BLASTN, ANI-calculation and centroid-clustering
 workflow. Annotation rules include CheckV, Cenote-Taker 3, NeoRdRp and vContact3.
 
-## PRJEB79569 analysis
-
-Downstream analysis: [phage_uv_ecology_analysis](https://github.com/shaman-narayanasamy/phage_uv_ecology_analysis).
-Raw data: https://www.ebi.ac.uk/ena/browser/view/PRJEB79569.
 Keep databases, temporary files and generated catalogues in project storage.
