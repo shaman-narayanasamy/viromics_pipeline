@@ -1,0 +1,52 @@
+---
+tmp_dir: "/path/to/project/tmp"
+output_dir: "/path/to/project/output/viromics"
+data_table: "/path/to/project/metadata/viromics_contigs.tsv"
+
+genomad:
+  db: "/path/to/genomad_db"
+  threads: 24
+
+virsorter2:
+  db: "/path/to/virsorter2/db"
+  threads: 24
+  prep_for_dramv: false
+
+viralm:
+  script: "/path/to/viral_model/predict.py"
+  db: "/path/to/viral_model/db"
+  length: 1000
+  threshold: 0.5
+  threads: 24
+
+deepmicroclass_input: "/path/to/multiomics/output/binning"
+
+votu_clustering:
+  backend: "vclust"  # allowed: vclust, best_practice
+  input_dir: "/path/to/project/output/viromics/consolidated_seqs"
+  output_subdir: "votu_clustering"
+
+  thresholds:
+    ani: 0.95
+    aligned_fraction: 0.85
+
+  vclust:
+    threads: 48
+    min_ident: 0.95
+    min_ani: 0.95
+    min_qcov: 0.85
+    outfmt: "lite"
+    algorithm: "leiden"
+    batch_size: 0
+    kmers_fraction: 1.0
+    max_seqs: 0
+
+  best_practice:
+    split: 250
+    makeblastdb_threads: 1
+    split_threads: 24
+    blast_threads: 48
+    min_ani: 95
+    min_tcov: 85
+    min_qcov: 0
+    min_length: 1

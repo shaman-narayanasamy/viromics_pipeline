@@ -1,0 +1,6 @@
+name: virsorter2_env
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - virsorter=2

@@ -1,0 +1,9 @@
+name: genomad
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  - genomad=1.7.4
+  - tensorflow<2.16
+  - keras<3

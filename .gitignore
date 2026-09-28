@@ -1,0 +1,9 @@
+.snakemake/
+__pycache__/
+*.pyc
+.DS_Store
+logs/
+output/
+results/
+config/local*.yml
+config/local*.yaml

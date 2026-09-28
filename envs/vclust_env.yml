@@ -1,0 +1,6 @@
+name: vclust_env
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - vclust=1.3.1

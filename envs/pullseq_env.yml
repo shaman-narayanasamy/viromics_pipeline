@@ -1,0 +1,6 @@
+name: pullseq_env
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - pullseq
